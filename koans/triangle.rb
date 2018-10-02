@@ -14,7 +14,22 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  # sides = [a, b, c].sort!
+  # if(sides[0] != sides[1] && sides[0] != sides[2])
+  #   :scalene
+  # elsif(sides[0] == sides[1] && sides[1] != sides[2] || sides[2] == sides[1] && sides[1] != sides[0])
+  #   :isosceles
+  # elsif(sides[0] == sides[1] && sides[0] == sides[2])
+  #   :equilateral
+  # end
+  uniq = [a, b, c].uniq.length
+  if (uniq > 2)
+    :scalene
+  elsif (uniq > 1)
+    :isosceles
+  else
+    :equilateral
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
