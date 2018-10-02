@@ -346,7 +346,8 @@ ENDTEXT
       elsif progress.last(2).size == 2 && progress.last(2).uniq.size == 1
         puts Color.cyan("  Do not lose hope.")
       elsif progress.last.to_i > 0
-        puts Color.cyan("  You are progressing. Excellent. #{progress.last} completed.")
+        system('afplay /System/Library/Sounds/Ping.aiff')
+        puts Color.cyan("  You are have answered correctly and are progressing. Excellent. #{progress.last} completed.")
       end
     end
 
