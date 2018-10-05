@@ -14,6 +14,8 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
+  a, b, c = [a, b, c].sort
+  fail TriangleError if (a+b) <= c
   # sides = [a, b, c].sort!
   # if(sides[0] != sides[1] && sides[0] != sides[2])
   #   :scalene
